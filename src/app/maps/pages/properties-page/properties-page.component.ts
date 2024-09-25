@@ -46,5 +46,4 @@ export class PropertiesPageComponent {
       lngLat: [-76.9708, -12.0850]
     }
   ];
-
 }

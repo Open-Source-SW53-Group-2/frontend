@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import {DestinationCardComponent} from "./destination/pages/destination-card/destination-card.component";
 
 export const routes: Routes = [
   {
@@ -6,7 +7,12 @@ export const routes: Routes = [
     loadChildren: () => import('./maps/maps.module').then(m => m.MapsModule),
   },
   {
-    path: '**',
-    redirectTo: 'maps',
+    path: 'destination-card',
+    component: DestinationCardComponent,
   }
+  // },
+  // {
+  //   path: '**',
+  //   redirectTo: 'maps',
+  // }
 ];

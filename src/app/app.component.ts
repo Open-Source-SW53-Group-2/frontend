@@ -19,6 +19,8 @@ import {PageNotFoundComponent} from "./public/pages/page-not-found/page-not-foun
 export class AppComponent {
   title = 'frontend';
   options = [
-    { path: '/home', title: 'Home' }
+    { path: '/home', title: 'Home' },
+    { path: '/plans', title: 'Plans' },
+    {path:'/services', title: 'Services' }
   ]
 }

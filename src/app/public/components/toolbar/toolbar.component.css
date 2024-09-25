@@ -37,20 +37,17 @@ mat-toolbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10px;
+    width: 1rem;
+
+  }
+  .nav-link {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    margin: 10px 0; /* Espaciado vertical */
   }
 }
 
-/* Para pantallas más grandes, el menú se oculta */
-@media (min-width: 769px) {
-  mat-toolbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10px;
-  }
-
-}
 
 
 

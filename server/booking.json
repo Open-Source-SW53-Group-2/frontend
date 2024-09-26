@@ -1,0 +1,40 @@
+{
+  "bookings": [
+    {
+      "id": 1,
+      "driver": "Carla Muñoz",
+      "date": "04/09/2024",
+      "time": "03:30 PM",
+      "location": "Av. de la Marina 2810, San Miguel 15087",
+      "licensePlate": "A1B-234",
+      "insurance": "ABC Insurance",
+      "discountCode": "ABCNAME12345",
+      "price": 39,
+      "status": "Confirmado"
+    },
+    {
+      "id": 2,
+      "driver": "Juan Pérez",
+      "date": "05/09/2024",
+      "time": "08:00 AM",
+      "location": "Av. Universitaria 2450, Lima",
+      "licensePlate": "C2D-567",
+      "insurance": "XYZ Insurance",
+      "discountCode": "XYZ123",
+      "price": 42,
+      "status": "Pendiente"
+    },
+    {
+      "id": 3,
+      "driver": "Ana Rodríguez",
+      "date": "06/09/2024",
+      "time": "10:00 AM",
+      "location": "Av. Javier Prado 123, Lima",
+      "licensePlate": "E3F-890",
+      "insurance": "LMN Insurance",
+      "discountCode": null,
+      "price": 35,
+      "status": "Pendiente"
+    }
+  ]
+}

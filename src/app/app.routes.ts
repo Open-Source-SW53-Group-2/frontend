@@ -9,6 +9,10 @@ export const routes: Routes = [
   {
     path: 'destination-card',
     component: DestinationCardComponent,
+  },
+  {
+    path: 'list',
+    component: DestinationCardComponent,
   }
   // },
   // {

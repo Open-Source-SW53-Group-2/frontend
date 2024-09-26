@@ -1,0 +1,69 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.location-card {
+  width: 45%;
+  margin: 10px;
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+}
+.mat-card-header {
+  display: flex;
+  align-items: center;
+}
+
+
+.mat-card-avatar {
+  width: 60px;  /* Tamaño máximo de la imagen */
+  height: 60px;  /* Tamaño máximo de la imagen */
+  object-fit: contain;  /* Mantiene la proporción de la imagen */
+  margin-right: 10px; /* Espacio entre imagen y contenido */
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFD700; /* Color de la estrella */
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-top: 1rem;
+}
+
+
+/*Botones*/
+
+.custom-button {
+  background-color: #5EA8FF; /* Color de fondo similar al que muestras */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  padding: 10px 20px; /* Espaciado interno */
+  text-align: center; /* Alinear el texto */
+  text-decoration: none; /* Sin subrayado */
+  display: inline-block;
+  font-size: 16px; /* Tamaño de fuente */
+  border-radius: 30px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  margin: 10px; /* Espaciado externo */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombras suaves */
+}
+
+.custom-button:disabled {
+  background-color: #B0C4DE; /* Color más claro cuando está deshabilitado */
+  cursor: not-allowed; /* Cambia el cursor cuando está deshabilitado */
+}
+
+

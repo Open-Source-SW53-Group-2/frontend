@@ -1,0 +1,30 @@
+<div class="card-container">
+  <div *ngFor="let university of paginatedList[currentPage]" class="location-card">
+    <mat-card>
+      <mat-card-header>
+        <img mat-card-avatar style="height: 60px; width: 60px" [src]="university.logo" alt="Imagen de la universidad">
+        <mat-card-title style="margin-left: 20px;">{{ university.nombre }}</mat-card-title>
+        <mat-card-subtitle style="margin-left: 20px;">{{ university.distrito }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ university.ubicacion }}</p>
+        <div class="details">
+          <mat-icon>calendar_today</mat-icon>
+          Próxima disponible hoy a las 15:30
+        </div>
+      </mat-card-content>
+      <mat-card-footer>
+        <div class="rating">
+          <span>4.5</span>
+          <mat-icon>star</mat-icon>
+        </div>
+      </mat-card-footer>
+    </mat-card>
+  </div>
+</div>
+
+<!-- Controles para cambiar de página -->
+<div class="pagination-controls">
+  <button class="custom-button" (click)="previousPage()" [disabled]="currentPage === 0">Anterior</button>
+  <button class="custom-button" (click)="nextPage()" [disabled]="currentPage === paginatedList.length - 1">Siguiente</button>
+</div>

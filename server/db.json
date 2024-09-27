@@ -41,6 +41,12 @@
       "email": "pepe3@gmail.com",
       "password": "1234",
       "id": 7
+    },
+    {
+      "username": "juan",
+      "email": "juan@gmail.com",
+      "password": "1234",
+      "id": 8
     }
   ],
   "reservations": [

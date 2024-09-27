@@ -11,6 +11,7 @@ import {CommonModule, DecimalPipe, NgForOf} from "@angular/common";
 import {MatButton} from "@angular/material/button";
 import {MatInput} from "@angular/material/input";
 import { Location } from '@angular/common';
+import {ToolbarComponent} from "../../../home/components/toolbar/toolbar.component";
 
 @Component({
   selector: 'app-book-trip',
@@ -26,7 +27,8 @@ import { Location } from '@angular/common';
     MatButton,
     MatInput,
     DecimalPipe,
-    CommonModule
+    CommonModule,
+    ToolbarComponent
   ],
   templateUrl: './book-trip.component.html',
   styleUrl: './book-trip.component.css'

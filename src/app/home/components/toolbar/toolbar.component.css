@@ -4,6 +4,8 @@ mat-toolbar {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+  color: black;
+  background-color: white;
 }
 
 /* Espaciadores en ambos extremos para separar ítems */
@@ -15,7 +17,7 @@ mat-toolbar {
 .nav-link {
   font-size: 16px;
   font-weight: bold;
-  color: white;
+  color: black;
   margin: 10px 0; /* Espaciado vertical */
 }
 

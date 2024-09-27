@@ -5,6 +5,7 @@ import {Location, NgForOf} from "@angular/common";
 import {MatButton} from "@angular/material/button";
 import {MatIcon} from "@angular/material/icon";
 import {Router} from "@angular/router";
+import {ToolbarComponent} from "../../../../../home/components/toolbar/toolbar.component";
 
 @Component({
   selector: 'app-reservation',
@@ -12,7 +13,8 @@ import {Router} from "@angular/router";
   imports: [
     MatButton,
     NgForOf,
-    MatIcon
+    MatIcon,
+    ToolbarComponent
   ],
   templateUrl: './reservation.component.html',
   styleUrl: './reservation.component.css'

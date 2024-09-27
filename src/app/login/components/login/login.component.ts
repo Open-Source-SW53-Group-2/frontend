@@ -35,7 +35,7 @@ export class LoginComponent {
       this.authService.login(this.email, this.password).subscribe((isAuthenticated) => {
         if (isAuthenticated) {
           // Redirige a la app después de autenticarse
-          this.router.navigate(['/list']); // Verifica que esta ruta esté definida en tu routing module
+          this.router.navigate(['/home']); // Verifica que esta ruta esté definida en tu routing module
         } else {
           alert('Credenciales incorrectas. Inténtalo de nuevo.');
         }

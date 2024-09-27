@@ -35,6 +35,12 @@
       "email": "pepe@gmail.com",
       "password": "pepe",
       "id": 6
+    },
+    {
+      "username": "pepe3",
+      "email": "pepe3@gmail.com",
+      "password": "1234",
+      "id": 7
     }
   ],
   "reservations": [

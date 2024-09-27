@@ -12,6 +12,7 @@ interface PlainMarket{
 }
 
 @Component({
+  selector: 'markers-page',
   standalone: true,
   imports: [
     NgForOf,

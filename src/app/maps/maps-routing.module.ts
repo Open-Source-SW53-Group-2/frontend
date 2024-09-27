@@ -5,12 +5,17 @@ import {FullScreenPageComponent} from "./pages/full-screen-page/full-screen-page
 import {MarkersPageComponent} from "./pages/markers-page/markers-page.component";
 import {PropertiesPageComponent} from "./pages/properties-page/properties-page.component";
 import {ZoomRangePageComponent} from "./pages/zoom-range-page/zoom-range-page.component";
+import {ReservationComponent} from "./pages/reservation-cards/pages/reservation/reservation.component";
 
 const routes: Routes = [
   {
     path: '',
     component: MapsLayoutComponent,
     children: [
+      {
+        path: 'reservation-cards',
+        component: ReservationComponent
+      },
       {
         path: 'full-screen-map',
         component: FullScreenPageComponent,

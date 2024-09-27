@@ -9,7 +9,7 @@
 }
 
 .text {
-  color: #000000;
+  color: black;
   font-size: 22px;
   gap: 8px;
 }
@@ -20,7 +20,7 @@
 
 .social-icons a {
   margin-right: 1rem;
-  color: #000000;
+  color: black;
   width: 200px;
 }
 
@@ -29,7 +29,7 @@
 
 
 .footer .text {
-  color: #000000;
+  color: black;
   font-size: 22px;
   font-family: Arial, sans-serif; /* Agrega esta línea para especificar la fuente */
   gap: 8px;

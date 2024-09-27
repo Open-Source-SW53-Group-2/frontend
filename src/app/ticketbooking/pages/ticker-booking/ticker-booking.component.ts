@@ -52,4 +52,14 @@ export class TickerBookingComponent {
     // Redirige a la ruta /maps cuando se hace clic en "Ver más del mapa"
     this.router.navigate(['/maps']);
   }
+
+  navigateToHome(): void {
+    // Redirige a la ruta /home cuando se hace clic en "Volver al inicio"
+    this.router.navigate(['/home']);
+  }
+
+  navigateToBooking(): void {
+    // Redirige a la ruta /booking cuando se hace clic en "Reservar"
+    this.router.navigate(['/list']);
+  }
 }

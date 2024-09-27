@@ -4,6 +4,7 @@ import {ServiceDestination} from "../../services/interfaces/destinationApi";
 import {DestinationApiService} from "../../services/destination-api.service";
 import {FormsModule} from "@angular/forms";
 import {Router} from "@angular/router";
+import {ToolbarComponent} from "../../../home/components/toolbar/toolbar.component";
 
 //Nota
 //En este caso, voy a definir cada para de mi linea para que se vea mejor
@@ -14,7 +15,8 @@ import {Router} from "@angular/router";
   standalone: true,
   imports: [
     NgForOf,
-    FormsModule
+    FormsModule,
+    ToolbarComponent
   ],
   templateUrl: './destination.component.html',
   styleUrl: './destination.component.css'

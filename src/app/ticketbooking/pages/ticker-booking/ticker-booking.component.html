@@ -51,8 +51,8 @@
     <div class="booking-options">
       <span>¿Deseas reservar?</span>
       <div class="options">
-        <button mat-raised-button color="primary">SI</button>
-        <button mat-raised-button color="warn">NO</button>
+        <button mat-raised-button color="primary" (click)="navigateToBooking()">SI</button>
+        <button mat-raised-button color="warn" (click)="navigateToHome()">NO</button>
       </div>
     </div>
 

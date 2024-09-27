@@ -180,7 +180,7 @@
       "location": "San Miguel",
       "nextAvailableTime": "15:30",
       "rating": 4.5,
-      "imageUrl": "path-to-image-upc-san-miguel.jpg",
+      "imageUrl": "https://www.upc.edu.pe/nosotros/campus/campus-san-miguel/img/frontis_campus.jpg",
       "driver": {
         "name": "Carla Muñoz",
         "photo": "https://via.placeholder.com/150",
@@ -195,7 +195,7 @@
       "location": "Villa",
       "nextAvailableTime": "16:00",
       "rating": 4.7,
-      "imageUrl": "path-to-image-upc-villa.jpg",
+      "imageUrl": "https://www.upc.edu.pe/nosotros/campus/campus-villa/img/villa-1.jpg",
       "driver": {
         "name": "Luis Ramirez",
         "photo": "https://via.placeholder.com/150",
@@ -210,7 +210,7 @@
       "location": "Monterrico",
       "nextAvailableTime": "17:00",
       "rating": 4.6,
-      "imageUrl": "path-to-image-upc-monterrico.jpg",
+      "imageUrl": "https://www.upc.edu.pe/nosotros/campus/campus-monterrico/img/monterrico-1.jpg",
       "driver": {
         "name": "José Morales",
         "photo": "https://via.placeholder.com/150",
@@ -225,7 +225,7 @@
       "location": "Magdalena",
       "nextAvailableTime": "13:30",
       "rating": 4.5,
-      "imageUrl": "path-to-image-usil-magdalena.jpg",
+      "imageUrl": "https://lh3.googleusercontent.com/p/AF1QipPQCeDubX0cif25vlhPKEG_v5mqanib8HVqqLYz=s1360-w1360-h1020",
       "driver": {
         "name": "Ana Gutierrez",
         "photo": "https://via.placeholder.com/150",
@@ -240,7 +240,7 @@
       "location": "San Isidro",
       "nextAvailableTime": "12:30",
       "rating": 4.5,
-      "imageUrl": "path-to-image-upc-san-isidro.jpg",
+      "imageUrl": "https://www.upc.edu.pe/nosotros/campus/campus-san-isidro/img/campus-si-vista-frontal.jpg",
       "driver": {
         "name": "María Vargas",
         "photo": "https://via.placeholder.com/150",
@@ -255,7 +255,7 @@
       "location": "San Miguel",
       "nextAvailableTime": "17:30",
       "rating": 4.5,
-      "imageUrl": "path-to-image-upn.jpg",
+      "imageUrl": "https://lh3.googleusercontent.com/p/AF1QipMhyUwbPsqOipVl6iGaRi6JYM2GPMQzrmx6s32D=s1360-w1360-h1020",
       "driver": {
         "name": "Fernando Córdova",
         "photo": "https://via.placeholder.com/150",
@@ -270,7 +270,7 @@
       "location": "Los Olivos",
       "nextAvailableTime": "14:00",
       "rating": 4.3,
-      "imageUrl": "path-to-image-upn-los-olivos.jpg",
+      "imageUrl": "https://lh3.googleusercontent.com/p/AF1QipP7ux79wENe4D9OUbsjVJkwvLkm3GXK2CrvwqJB=s1360-w1360-h1020",
       "driver": {
         "name": "Luis Sanchez",
         "photo": "https://via.placeholder.com/150",
@@ -285,7 +285,7 @@
       "location": "Lima Centro",
       "nextAvailableTime": "13:00",
       "rating": 4.4,
-      "imageUrl": "path-to-image-utp-lima.jpg",
+      "imageUrl": "https://lh3.googleusercontent.com/p/AF1QipMvg0cM0l4HyGVMYlegPjF_bKgRSr6MpVcY4Nyl=s1360-w1360-h1020",
       "driver": {
         "name": "Carlos Palacios",
         "photo": "https://via.placeholder.com/150",
@@ -300,7 +300,7 @@
       "location": "San Juan de Lurigancho",
       "nextAvailableTime": "12:00",
       "rating": 4.2,
-      "imageUrl": "path-to-image-utp-sjl.jpg",
+      "imageUrl": "https://lh3.googleusercontent.com/p/AF1QipMBrv3GWR-yVxj83kXTXx5JVqfsWzJAPSf_DGAm=s1360-w1360-h1020",
       "driver": {
         "name": "Andrea Rodríguez",
         "photo": "https://via.placeholder.com/150",
@@ -315,7 +315,7 @@
       "location": "San Isidro",
       "nextAvailableTime": "14:30",
       "rating": 4.3,
-      "imageUrl": "path-to-image-utp-san-isidro.jpg",
+      "imageUrl": "https://lh3.googleusercontent.com/p/AF1QipMSj0i13LxVxWlzls7SvO6l3p94oOelShE1IsxF=s1360-w1360-h1020",
       "driver": {
         "name": "Juan Perez",
         "photo": "https://via.placeholder.com/150",
@@ -330,7 +330,7 @@
       "location": "Surco",
       "nextAvailableTime": "15:00",
       "rating": 4.8,
-      "imageUrl": "path-to-image-esan.jpg",
+      "imageUrl": "https://lh5.googleusercontent.com/p/AF1QipPoGmIitZvH6_x3r0DdcENEJYXyKhXULIVvD9QT=w408-h306-k-no",
       "driver": {
         "name": "Diego Ramírez",
         "photo": "https://via.placeholder.com/150",
@@ -345,7 +345,7 @@
       "location": "Monterrico",
       "nextAvailableTime": "12:30",
       "rating": 4.7,
-      "imageUrl": "path-to-image-ulima.jpg",
+      "imageUrl": "https://lh5.googleusercontent.com/p/AF1QipMlTl5dKrCx0IjEsSilTngGBmwV4xB35rgLt0OR=w408-h306-k-no",
       "driver": {
         "name": "Pablo Quintana",
         "photo": "https://via.placeholder.com/150",
@@ -360,7 +360,7 @@
       "location": "San Miguel",
       "nextAvailableTime": "13:30",
       "rating": 4.9,
-      "imageUrl": "path-to-image-pucp.jpg",
+      "imageUrl": "https://lh5.googleusercontent.com/p/AF1QipNkLfSEJM7yi91Y6chewBLKBgDjx1ugz3JEDQCL=w408-h272-k-no",
       "driver": {
         "name": "Lucía Fernández",
         "photo": "https://via.placeholder.com/150",
@@ -375,7 +375,7 @@
       "location": "Barranco",
       "nextAvailableTime": "11:30",
       "rating": 4.6,
-      "imageUrl": "path-to-image-utec.jpg",
+      "imageUrl": "https://lh5.googleusercontent.com/p/AF1QipMxHAHAnD1XeQe_N4xiGhFmNcbxZoLPaKEcJkoW=w408-h272-k-no",
       "driver": {
         "name": "Jorge Silva",
         "photo": "https://via.placeholder.com/150",
@@ -390,7 +390,7 @@
       "location": "Monterrico",
       "nextAvailableTime": "12:45",
       "rating": 4.6,
-      "imageUrl": "path-to-image-universidad-lima.jpg",
+      "imageUrl": "https://lh5.googleusercontent.com/p/AF1QipMlTl5dKrCx0IjEsSilTngGBmwV4xB35rgLt0OR=w408-h306-k-no",
       "driver": {
         "name": "Ana Salas",
         "photo": "https://via.placeholder.com/150",
@@ -405,7 +405,7 @@
       "location": "Santiago de Surco",
       "nextAvailableTime": "15:45",
       "rating": 4.2,
-      "imageUrl": "path-to-image-urp.jpg",
+      "imageUrl": "https://lh3.googleusercontent.com/p/AF1QipMRL3ltAX9cwFUhi2Q8tk-srKMxlHWyYQ0GQ-JM=s1360-w1360-h1020",
       "driver": {
         "name": "Daniela Soto",
         "photo": "https://via.placeholder.com/150",

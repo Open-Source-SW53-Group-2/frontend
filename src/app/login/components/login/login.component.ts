@@ -30,12 +30,13 @@ export class LoginComponent {
 
   constructor(private authService: AuthService, private router: Router) {}
 
+  // Método para iniciar sesión
   onSubmit() {
     if (this.email && this.password) {
       this.authService.login(this.email, this.password).subscribe((isAuthenticated) => {
         if (isAuthenticated) {
           // Redirige a la app después de autenticarse
-          this.router.navigate(['/home']); // Verifica que esta ruta esté definida en tu routing module
+          this.router.navigate(['/home']);
         } else {
           alert('Credenciales incorrectas. Inténtalo de nuevo.');
         }
@@ -48,7 +49,10 @@ export class LoginComponent {
     this.showPassword = !this.showPassword;
   }
 
+  // Navegar a la página de registro
   navigateToRegister() {
     this.router.navigate(['/register']);
   }
+
+
 }

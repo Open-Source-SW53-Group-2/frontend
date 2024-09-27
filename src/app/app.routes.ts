@@ -7,6 +7,7 @@ import {PlansComponent} from "./home/pages/plans/plans.component";
 import {ServicesComponent} from "./home/pages/services/services.component";
 import {TickerBookingComponent} from "./ticketbooking/pages/ticker-booking/ticker-booking.component";
 import {RegisterComponent} from "./login/components/register/register.component";
+import {RescheduleTripComponent} from "./booking/components/reschedule-trip/reschedule-trip.component";
 
 export const routes: Routes = [
   {
@@ -54,6 +55,7 @@ export const routes: Routes = [
     loadChildren: () => import('./maps/pages/reservation-cards/reservation-cards.module').then(m => m.ReservationCardsModule),
     canActivate: [AuthGuard], // Protege con el guard
   },
+  { path: 'reschedule/:id', component: RescheduleTripComponent },
   {
     path: '**',
     component: PageNotFoundComponent,

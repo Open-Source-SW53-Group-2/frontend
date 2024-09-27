@@ -1,32 +1,31 @@
 <app-toolbar></app-toolbar>
 
-
 <div class="reservations-container">
   <h2>Tus reservas</h2>
 
   <div class="reservation-tabs">
-    <button mat-raised-button class="tab-button" color="primary">Próxima</button>
-    <button mat-raised-button class="tab-button">Completado</button>
-    <button mat-raised-button class="tab-button">Cancelado</button>
+    <button mat-raised-button color="primary">Próxima</button>
+    <button mat-raised-button>Completado</button>
+    <button mat-raised-button>Cancelado</button>
   </div>
 
-  <!-- Sección de próximas reservas -->
-  <h3>Próxima</h3>
-  <div *ngFor="let reservation of confirmedReservations" class="reservation-card">
-    <img [src]="reservation.driver.photo" alt="{{ reservation.driver.name }}" class="driver-photo">
+  <div *ngFor="let reserva of reservas" class="reserva-card">
+    <img [src]="reserva.driver.photo" alt="{{ reserva.driver.name }}" class="driver-photo">
     <div class="reservation-info">
-      <h4>{{ reservation.driver.name }}</h4>
-      <p>{{ reservation.location }}</p>
-      <p><strong>{{ reservation.nextAvailableTime }}</strong></p>
-      <p class="status confirmed">{{ reservation.driver.discountCode === 'carla-munoz' ? 'Confirmado' : 'Pendiente' }}</p>
-      <p><mat-icon>calendar_today</mat-icon> {{ reservation.driver.discountCode === 'carla-munoz' ? '17/09/2024' : '04/06/2024'}}</p>
+      <h3>{{ reserva.usuario }}</h3>
+      <p>{{ reserva.ubicacion }}</p>
+      <p><strong>{{ reserva.hora }}</strong></p>
+      <p>{{ reserva.estado }}</p>
+      <p><mat-icon>event</mat-icon> {{ reserva.fecha | date:'dd/MM/yyyy' }}</p>
     </div>
+
     <div class="reservation-actions">
-      <button mat-button color="accent" (click)="rescheduleReservation(reservation)">Reprogramar</button>
-      <button mat-raised-button color="primary" (click)="openChat(reservation)">Chat</button>
+      <button mat-button color="accent" [routerLink]="['/reschedule', reserva.id]">Reprogramar</button>
+      <button mat-raised-button color="primary" (click)="openChat(reserva)">Chat</button>
+      <button mat-raised-button color="warn" (click)="deleteReservation(reserva.id)">Eliminar</button>
+
     </div>
   </div>
 
-  <!-- Botón para volver a la sesión anterior -->
-  <button mat-raised-button color="warn" (click)="goBack()">Volver</button>
+  <button mat-raised-button color="warn" class="back-button" (click)="goBack()">Volver</button>
 </div>

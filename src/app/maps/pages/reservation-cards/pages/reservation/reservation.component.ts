@@ -1,11 +1,12 @@
 import {Component, OnInit} from '@angular/core';
 import {Reservation} from "../../service/interface/reservation";
 import {HttpClient} from "@angular/common/http";
-import {Location, NgForOf} from "@angular/common";
+import {DatePipe, Location, NgForOf} from "@angular/common";
 import {MatButton} from "@angular/material/button";
 import {MatIcon} from "@angular/material/icon";
-import {Router} from "@angular/router";
+import {Router, RouterLink} from "@angular/router";
 import {ToolbarComponent} from "../../../../../home/components/toolbar/toolbar.component";
+import {ReservaService} from "../../service/reserva.service";
 
 @Component({
   selector: 'app-reservation',
@@ -14,52 +15,60 @@ import {ToolbarComponent} from "../../../../../home/components/toolbar/toolbar.c
     MatButton,
     NgForOf,
     MatIcon,
-    ToolbarComponent
+    ToolbarComponent,
+    DatePipe,
+    RouterLink
   ],
   templateUrl: './reservation.component.html',
   styleUrl: './reservation.component.css'
 })
 export class ReservationComponent implements OnInit{
 
-
-
-  confirmedReservations: Reservation[] = [];
-  apiUrl = 'http://localhost:3000/destinations';  // Asegúrate de que esta URL esté bien configurada
+  reservas: any[] = []; // Lista de reservas que viene del JSON-Server
 
   constructor(
     private http: HttpClient,
-    private location: Location,
     private router: Router,
+    private reservaService: ReservaService
   ) {}
 
   ngOnInit(): void {
-    this.loadReservations();
+    this.getReservas();  // Llama al servicio para obtener las reservas
   }
 
-  // Cargar reservas desde el servidor JSON
-  loadReservations(): void {
-    this.http.get<Reservation[]>(this.apiUrl).subscribe((reservations) => {
-      this.confirmedReservations = reservations;
+  // Método para obtener las reservas desde el servicio
+  getReservas(): void {
+    this.reservaService.getReservas().subscribe((data) => {
+      this.reservas = data;
     });
   }
 
-  rescheduleReservation(reservation: Reservation): void {
-    console.log(`Reprogramando la reserva de ${reservation.driver.name}`);
-    // Lógica de reprogramación
+  // Lógica para reprogramar la reserva
+  rescheduleReservation(reservation: any): void {
+    console.log(`Reprogramando la reserva de ${reservation.usuario}`);
+    // Aquí puedes agregar la lógica para reprogramar la reserva
   }
 
-  cancelReservation(reservation: Reservation): void {
-    console.log(`Cancelando la reserva de ${reservation.driver.name}`);
-    // Lógica de cancelación
+  // Lógica para iniciar un chat
+  openChat(reservation: any): void {
+    console.log(`Iniciando chat con ${reservation.usuario}`);
+    // Aquí puedes agregar la lógica para iniciar un chat
   }
 
-  openChat(reservation: Reservation): void {
-    console.log(`Iniciando chat con ${reservation.driver.name}`);
-    // Lógica para iniciar el chat
-  }
-
+  // Lógica para volver a la página anterior
   goBack(): void {
     this.router.navigate(['/list']);
   }
 
+  deleteReservation(reservaId: number): void {
+    if (confirm('¿Estás seguro que deseas eliminar esta reserva?')) {
+      this.reservaService.deleteReserva(reservaId).subscribe(() => {
+        // Filtrar las reservas en la lista después de eliminar
+        this.reservas = this.reservas.filter(reserva => reserva.id !== reservaId);
+        alert('Reserva eliminada exitosamente');
+      }, error => {
+        console.error('Error al eliminar la reserva', error);
+      });
+    }
+  }
 }

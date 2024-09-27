@@ -12,6 +12,7 @@ import {MatButton} from "@angular/material/button";
 import {MatInput} from "@angular/material/input";
 import { Location } from '@angular/common';
 import {ToolbarComponent} from "../../../home/components/toolbar/toolbar.component";
+import {ReservaService} from "../../../maps/pages/reservation-cards/service/reserva.service";
 
 @Component({
   selector: 'app-book-trip',
@@ -52,7 +53,8 @@ export class BookTripComponent implements OnInit{
     private route: ActivatedRoute,
     private router: Router,
     private destinationService: DestinationApiService,
-    private location: Location
+    private location: Location,
+    private reservaService: ReservaService
   ) { }
 
   ngOnInit(): void {
@@ -100,15 +102,31 @@ export class BookTripComponent implements OnInit{
 
   //Metodo para confirmar la reserva
   confirmReservation(): void {
+    console.log('Botón de confirmar viaje presionado');  // Agrega este log para depurar
+
     if (!this.selectedDate || !this.selectedTime) {
       alert("Por favor, selecciona una fecha y una hora para continuar.");
       return;
     }
-    // console.log(`Reserva confirmada para: ${this.destination.name} el día ${this.selectedDate} a las ${this.selectedTime}`);
-    alert(`Reserva confirmada para ${this.destination.name} el día ${this.selectedDate} a las ${this.selectedTime}`);
-    // Redirigir a la página de reservas después de cerrar el mensaje
-    this.router.navigate(['/reservations']);  // Cambia 'reservations' por la ruta de tu componente de reservas
 
+    const newReservation = {
+      usuario: this.destination.driver.name,
+      ubicacion: this.destination.location,
+      hora: this.selectedTime,
+      estado: 'Confirmado',
+      fecha: `${this.selectedDate}/09/2024`,
+      driver: this.destination.driver,  // Asegúrate de guardar los datos del conductor
+      destinationId: this.destinationId// Formatea la fecha según tu preferencia
+    };
+
+    //Codigo de prueba
+    // Agregar la nueva reserva usando el servicio
+    this.reservaService.addReserva(newReservation).subscribe(() => {
+      alert(`Reserva confirmada para ${this.destination.name} el día ${this.selectedDate} a las ${this.selectedTime}`);
+      this.router.navigate(['/reservations']);  // Redirigir a la página de reservas
+    }, error => {
+      console.error('Error al confirmar la reserva', error);
+    });
   }
 
   // Método para regresar a la página anterior

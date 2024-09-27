@@ -87,7 +87,7 @@
       "ubicacion": "San Miguel",
       "hora": "16:30",
       "estado": "Confirmado",
-      "fecha": "2024-09-27",
+      "fecha": "2024-09-30",
       "driver": {
         "name": "Jose Morales",
         "photo": "https://plus.unsplash.com/premium_photo-1671656349322-41de944d259b?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -144,6 +144,22 @@
       },
       "destinationId": 5,
       "id": 4
+    },
+    {
+      "usuario": "Ana Gutierrez",
+      "ubicacion": "Magdalena",
+      "hora": "16:30",
+      "estado": "Confirmado",
+      "fecha": "27/09/2024",
+      "driver": {
+        "name": "Ana Gutierrez",
+        "photo": "https://plus.unsplash.com/premium_photo-1664541336896-b3d5f7dec9a3?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "vehiclePlate": "D4E-123",
+        "discount": "12%",
+        "discountCode": "ana-gutierrez"
+      },
+      "destinationId": 4,
+      "id": 5
     }
   ],
   "university": [

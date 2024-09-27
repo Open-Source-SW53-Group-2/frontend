@@ -1,0 +1,42 @@
+.reservations-container {
+  padding: 20px;
+}
+
+.reservation-tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.tab-button {
+  min-width: 120px;
+}
+
+.reservation-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.driver-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.reservation-info {
+  flex: 1;
+}
+
+.status {
+  font-weight: bold;
+}
+
+.reservation-actions {
+  display: flex;
+  gap: 10px;
+}

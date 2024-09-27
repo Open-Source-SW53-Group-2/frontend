@@ -1,0 +1,29 @@
+<div class="reservations-container">
+  <h2>Tus reservas</h2>
+
+  <div class="reservation-tabs">
+    <button mat-raised-button class="tab-button" color="primary">Próxima</button>
+    <button mat-raised-button class="tab-button">Completado</button>
+    <button mat-raised-button class="tab-button">Cancelado</button>
+  </div>
+
+  <!-- Sección de próximas reservas -->
+  <h3>Próxima</h3>
+  <div *ngFor="let reservation of confirmedReservations" class="reservation-card">
+    <img [src]="reservation.driver.photo" alt="{{ reservation.driver.name }}" class="driver-photo">
+    <div class="reservation-info">
+      <h4>{{ reservation.driver.name }}</h4>
+      <p>{{ reservation.location }}</p>
+      <p><strong>{{ reservation.nextAvailableTime }}</strong></p>
+      <p class="status confirmed">{{ reservation.driver.discountCode === 'carla-munoz' ? 'Confirmado' : 'Pendiente' }}</p>
+      <p><mat-icon>calendar_today</mat-icon> {{ reservation.driver.discountCode === 'carla-munoz' ? '17/09/2024' : '04/06/2024'}}</p>
+    </div>
+    <div class="reservation-actions">
+      <button mat-button color="accent" (click)="rescheduleReservation(reservation)">Reprogramar</button>
+      <button mat-raised-button color="primary" (click)="openChat(reservation)">Chat</button>
+    </div>
+  </div>
+
+  <!-- Botón para volver a la sesión anterior -->
+  <button mat-raised-button color="warn" (click)="goBack()">Volver</button>
+</div>

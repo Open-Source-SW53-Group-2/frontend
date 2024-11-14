@@ -1,8 +1,0 @@
-
-{
-  "/api/users": "/users",
-  "/api/reservations": "/reservations",
-  "/api/destinations": "/destinations",
-  "/api/promotions": "/promotions"
-}
-

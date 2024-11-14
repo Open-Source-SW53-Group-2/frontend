@@ -1,70 +1,65 @@
+// auth.service.ts
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {map, Observable} from "rxjs";
-import {Router} from "@angular/router";
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable, of } from 'rxjs';
+import { map, catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  // URL base de la API (puedes modificar esta URL para que coincida con la de tu backend o JSON-Server)
-  private baseUrl = 'http://localhost:3000';
+  private apiUrl = 'https://gouniprojectdeploy-production.up.railway.app/api/v1/authentication';
 
   constructor(private http: HttpClient) {}
 
+  // Método para obtener el token desde localStorage
+  getToken(): string | null {
+    return localStorage.getItem('token');
+  }
+
+  // Método de inicio de sesión que recibe usuario y contraseña
+  login(username: string, password: string): Observable<boolean> {
+    const url = `${this.apiUrl}/sign-in`;
+    const body = { username, password };
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+
+    return this.http.post<any>(url, body, { headers }).pipe(
+      map(response => {
+        if (response && response.token) {
+          // Almacena el token en localStorage
+          localStorage.setItem('token', response.token);
+          return true;
+        }
+        return false;
+      }),
+      catchError(error => {
+        console.error('Error during login:', error);
+        return of(false);
+      })
+    );
+  }
+
+  // Método de registro
+  register(username: string, password: string, role: string = 'USER'): Observable<any> {
+    const url = `${this.apiUrl}/sign-up`;
+    const body = { username, password, role };
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+
+    return this.http.post<any>(url, body, { headers }).pipe(
+      catchError(error => {
+        console.error('Error durante el registro:', error);
+        return of(null);
+      })
+    );
+  }
+
+  // Método para verificar si el usuario está logueado
   isLoggedIn(): boolean {
-    // Aquí puedes utilizar el almacenamiento local o de sesión para verificar si el usuario está autenticado.
-    // Por ejemplo, puedes verificar si existe un token de autenticación.
-    const user = localStorage.getItem('authUser');
-    return user !== null;
+    return !!this.getToken();
   }
 
-  /**
-   * Verifica si un usuario ya existe en la base de datos
-   * @param email El correo electrónico a verificar
-   * @returns Observable<boolean>
-   */
-  checkUserExists(email: string): Observable<any> {
-    return this.http.get<any[]>(`${this.baseUrl}/users?email=${email}`)
-      .pipe(
-        map(users => users.length > 0 ? users : null) // Verifica si el usuario ya existe
-      );
+  // Método de logout para eliminar el token
+  logout(): void {
+    localStorage.removeItem('token');
   }
-
-  /**
-   * Registra un nuevo usuario en la base de datos
-   * @param userData Los datos del nuevo usuario (correo, contraseña, etc.)
-   * @returns Observable<any>
-   */
-  register(userData: any): Observable<any> {
-    return this.http.post(`${this.baseUrl}/users`, userData); // Envía los datos del nuevo usuario al backend
-  }
-
-  /**
-   * Inicia sesión verificando las credenciales del usuario
-   * @param email El correo del usuario
-   * @param password La contraseña del usuario
-   * @returns Observable<any>
-   */
-  login(email: string, password: string): Observable<boolean> {
-    return this.http.get<any[]>(`${this.baseUrl}/users?email=${email}`)
-      .pipe(
-        map(users => {
-          if (users.length > 0 && users[0].password === password) {
-            // Credenciales correctas, guardar el usuario autenticado en localStorage
-            localStorage.setItem('authUser', JSON.stringify(users[0]));
-            return true;
-          }
-          return false;
-        })
-      );
-  }
-
-  /**
-   * Simula el cierre de sesión del usuario (puedes implementar lógica más compleja aquí)
-   */
-  logout() {
-    console.log('Usuario desconectado');
-  }
-
 }
